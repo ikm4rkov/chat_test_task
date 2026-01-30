@@ -1,0 +1,14 @@
+*
+!chat_test_task/
+!chat_test_task/*
+!chat_test_task/*/
+!chat_test_task/*/*
+!tests/*
+!tests
+!.gitignore
+!alembic.ini
+!docker-compose.yml
+!Dockerfile
+!README.md
+!requirements.txt
+
