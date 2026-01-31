@@ -5,6 +5,10 @@
 !chat_test_task/*/*
 !tests/*
 !tests
+!alembic
+!alembic/*
+!alembic/*/
+!alembic/*/*
 !.gitignore
 !alembic.ini
 !docker-compose.yml

@@ -1,4 +1,4 @@
-# Тестовое задание: "API чатов и приложений"
+# Пример back-end сервиса для API чатов и приложений
 
 ## Описание
 
@@ -14,7 +14,7 @@
 
 ---
 
-## Стэк
+## Стэк программ
 
 - Python 3.10
 - FastAPI
@@ -30,9 +30,9 @@
 
 ### Требования (тестировалось на)
 
-- Docker Desktop (Windows / Linux / macOS)
-- Docker Compose (идёт вместе с Docker Desktop)
-- PostgerSQL 18.1
+- Docker Desktop
+- Docker Compose
+- PostgreSQL 18.1
 
 Также может быть запущено с помощью устанавливаемый под Linux утилиты Docker
 
@@ -44,6 +44,8 @@
 cd chat_test_task
 docker compose up --build
 ```
+
+После создания контейнера можно запускать без ключа --build
 
 После успешного запуска:
 
@@ -89,7 +91,7 @@ curl -X POST "http://localhost:8000/chats/" \
 ```bash
 curl -X POST "http://localhost:8000/chats/1/messages/" \
      -H "Content-Type: application/json" \
-     -d '{"text": "Привет!"}'
+     -d '{"text": "Привет, мир!"}'
 ```
 
 ---
@@ -117,9 +119,11 @@ curl -X DELETE "http://localhost:8000/chats/1"
 ### Запуск тестов локально
 
 ```bash
+cd chat_test_task
+pip install --no-cache-dir -r requirements.txt
 pytest -v
 ```
-# Для запуска локально требуется создать базу данных chat_db с помощью PostgreSQL
+**Для запуска локально требуется создать базу данных chat_db с помощью PostgreSQL**
 
 ---
 

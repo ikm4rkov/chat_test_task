@@ -5,6 +5,7 @@ ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
+ENV PYTHONPATH=/app
 
 RUN echo "deb http://mirror.yandex.ru/debian trixie main contrib non-free non-free-firmware" > /etc/apt/sources.list && \
     echo "deb http://mirror.yandex.ru/debian trixie-updates main contrib non-free non-free-firmware" >> /etc/apt/sources.list && \
